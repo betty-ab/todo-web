@@ -10,17 +10,24 @@ Add, edit, and delete tasks
 Mark tasks as completed or pending
 
 Search and filter tasks
+
 Drag & drop task reordering (Sortable.js)
+
 Recurring tasks (Daily, Weekly, Monthly)
+
 Priority levels with color indicators
+
 Dark mode toggle
+
 Export tasks as a JSON file
+
 Data saved using localStorage
 
  Tech Stack
-HTML
-CSS
-JavaScript 
+ 
+-HTML
+-CSS
+-JavaScript 
 
 
  Run 
