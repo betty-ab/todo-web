@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Sortable.js for Drag & Drop -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+</head>
+<body>
+  <div class="todo-container">
+    <h1>Professional To-Do List</h1>
+
+    <!-- Input Section -->
+    <div class="task-inputs">
+      <input type="text" id="task-input" placeholder="Add a new task">
+      <input type="date" id="due-date">
+      <select id="priority">
+        <option value="Low">Low</option>
+        <option value="Medium" selected>Medium</option>
+        <option value="High">High</option>
+      </select>
+      <select id="recurrence">
+        <option value="None" selected>None</option>
+        <option value="Daily">Daily</option>
+        <option value="Weekly">Weekly</option>
+        <option value="Monthly">Monthly</option>
+      </select>
+      <button id="add-btn">Add Task</button>
+    </div>
+
+    <!-- Search -->
+    <input type="text" id="search-input" placeholder="Search tasks...">
+
+    <!-- Filters -->
+    <div class="filters">
+      <button data-filter="all">All</button>
+      <button data-filter="pending">Pending</button>
+      <button data-filter="completed">Completed</button>
+    </div>
+
+    <!-- Sort Options -->
+    <div class="sort-options">
+      <button data-sort="due">Sort by Due Date</button>
+      <button data-sort="priority">Sort by Priority</button>
+      <button data-sort="status">Sort by Status</button>
+    </div>
+
+    <ul id="task-list"></ul>
+
+    <!-- Export & Dark Mode -->
+    <div class="extras">
+      <button id="export-btn">Export Tasks</button>
+      <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </div>
+  </div>
+
+  <!-- Toast Notifications -->
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

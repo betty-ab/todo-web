@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f0f2f5;
+  color: #000;
+  transition: background 0.3s, color 0.3s;
+}
+
+.todo-container {
+  background-color: #fff;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.task-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.task-inputs input, .task-inputs select, .task-inputs button {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  flex: 1 1 auto;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover { background-color: #0056b3; }
+
+.filters, .sort-options, .extras {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f9f9f9;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+li.removing {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.delete-btn, .edit-btn {
+  margin-left: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-btn { background-color: #b22222; }
+.delete-btn:hover { background-color: darkred; }
+.edit-btn { background-color: #ff8c00; }
+.edit-btn:hover { background-color: #e69500; }
+
+/* Toast Notifications */
+.toast {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #333;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.toast.show { opacity: 1; }
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+body.dark-mode .todo-container {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+body.dark-mode button {
+  background-color: #333;
+  color: #f0f0f0;
+}
+body.dark-mode .delete-btn { background-color: #b22222; }
+body.dark-mode .edit-btn { background-color: #ff8c00; }
+
+/* Mobile Optimization */
+@media (max-width: 350px) {
+  h1 { font-size: 1.2rem; }
+  button { font-size: 0.9rem; }
+  .task-inputs { flex-direction: column; }
+}
