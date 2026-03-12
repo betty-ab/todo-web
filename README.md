@@ -6,7 +6,9 @@ It helps users organize tasks efficiently with features like drag-and-drop sorti
 🚀 Features
 
 Add, edit, and delete tasks
+
 Mark tasks as completed or pending
+
 Search and filter tasks
 Drag & drop task reordering (Sortable.js)
 Recurring tasks (Daily, Weekly, Monthly)
